@@ -1,0 +1,718 @@
+﻿/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p,
+a, img, small, ol, ul, li,
+fieldset, form, label, legend,
+article, aside, footer, header,
+menu, nav, section{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.5;
+}
+ol, ul {
+	list-style: none;
+}
+
+
+/* My Code
+ * =======================
+ */
+@font-face {
+    font-family: 'wisdom_scriptregular';
+    src: url('../fonts/wisdom_script_aj-webfont.eot');
+    src: url('../fonts/wisdom_script_aj-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/wisdom_script_aj-webfont.woff') format('woff'),
+         url('../fonts/wisdom_script_aj-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'sullivanfill';
+    src: url('../fonts/sullivan-fill-webfont.eot');
+    src: url('../fonts/sullivan-fill-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sullivan-fill-webfont.woff') format('woff'),
+         url('../fonts/sullivan-fill-webfont.ttf') format('truetype'),
+         url('../fonts/sullivan-fill-webfont.svg#sullivanfill') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'zeroneroblack';
+    src: url('../fonts/zeronero-webfont.eot');
+    src: url('../fonts/zeronero-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/zeronero-webfont.woff') format('woff'),
+         url('../fonts/zeronero-webfont.ttf') format('truetype'),
+         url('../fonts/zeronero-webfont.svg#zeroneroblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html, body, ul{
+    margin:0;
+    padding:0;
+}
+body{
+	width:95%;
+	margin:0 auto;
+	font:normal 100% 'PT Sans', sans-serif;
+	text-transform:uppercase;
+	text-align:center;
+	background-color:#f2f2f2;
+}
+a{
+    outline: none;
+}
+
+/* Grid */
+
+.page{
+	max-width:1200px;
+    min-width:768px;
+    padding:0;
+    margin:0 auto;
+	box-shadow:0 0 10px 0 #c8c8c8;
+	background:#fff;
+	font-size:0.875em; /* 14px / 16px */
+	line-height:1.5;
+}
+.clearfix:after{
+    content:"";
+    display:table;
+    clear:both;
+}
+.layout-column-33{
+	width:33%;
+	height:255px;
+	float:left;
+}
+.layout-column-34{
+	width:33.333%;
+	height:255px;
+	float:left;
+}
+.layout-column-67{
+	width:67%;
+	height:255px;
+	float:left;
+}
+.layout-column-330{
+	height:330px;
+	background:#fff;
+}
+.layout-column-footer{
+	width:33.33%;
+	float:left;
+}
+
+/* Header */
+.page-header{
+	position: relative;
+	height:55px;
+	z-index:5;
+}
+.main-menu li{
+	float: left;
+	width:20%;
+	padding:0;
+}
+.main-menu li a{
+	display:block;
+	color:#000;
+	text-decoration:none;
+	font-weight:700;
+	line-height:1.857; /* 26px / 14px */
+	padding:15px 0;
+}
+.main-menu .logo{ padding:0; }
+.main-menu li a:hover{ color:#81b3d2; }
+.main-menu li a:active{ color:#b2b2b2; }
+.main-menu .main-menu-active{ color:#766357; }
+.main-menu .main-menu-active:hover{ color:#604e43; }
+.main-menu .main-menu-active:active{ color:#d6d0cc; }
+
+
+/* Content */
+
+.intro{
+	position:relative;
+	width:100%;
+	height:382px;
+	background:url(../images/index-image.jpg) no-repeat 0 20%;
+	background-size:cover;
+	z-index:2;
+	padding:65px 0;
+}
+.intro:after{
+	content:'';
+	display:table;
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:100%;
+	height:60px;
+	background:url(../images/image-white.png) no-repeat 0 100%;
+	background-size:100%;
+} /* Исправить баг с белой вставкой при изменении размера экрана!!!!!!!!!!! */
+.intro__text{
+	height:90px;
+	margin:0 auto;
+	margin-bottom:40px;
+	padding-top:10px;
+}
+.intro__text-top{
+	display:inline-block;
+	width:282px;
+	font-family: 'sullivanfill';
+	font-size:63px;
+	line-height:1;
+	color:#81b3d2;
+}
+.intro__text-top--span{
+	display:inline-block;
+	font-family:'wisdom_scriptregular';
+	font-size:29px;
+	line-height:.2;
+	color:#766357;
+	text-transform:none;
+}
+.intro__text-middle{
+	width:500px;
+	font-family:'zeroneroblack';
+	font-size: 116px;
+	font-weight:bold;
+	line-height:.8;
+	color:#fff;
+}
+.intro__text-bottom{
+	width:335px;
+	font-family:'wisdom_scriptregular';
+	font-size:36.7px;
+	line-height:1;
+	text-transform:none;
+	color:#fff;
+}
+.index-title{
+	padding:55px;
+}
+.feature h2,
+.index-title h1{
+	font-size:1.5em; /* 21px / 14px */
+	line-height:1.238; /* 26px / 21px */ 
+	font-weight:700;
+	margin-bottom:15px;
+}
+.index-title h1{
+	margin-bottom:30px;
+}
+.feature{
+	padding:50px;
+}
+.feature__number{
+	margin-bottom:20px;
+}
+.feature__type{
+	position:relative;
+}
+.feature__type:before{
+	content:'';
+	display:table;
+	position:absolute;
+	left:50%;
+	top:-100px;
+	margin-left:-35px;
+	background:url(../images/sedona-sprite.png) 0 0 no-repeat;
+	width:76px;
+	height:76px;
+}
+.feature__type--food:before{
+	background-position:-102px 0;
+}
+.feature__type--gift:before{
+	background-position:-208px 0;
+}
+.feature--blue{
+	background-color:#81b3d2;
+	color:#fff;
+	height:100%;
+}
+.feature--grey{
+	background-color:#eee;
+	height:100%;
+}
+.feature--white{
+	padding-top:160px;
+}
+.feature--image img{
+	width:100%;
+}
+
+
+/* Index Form */
+.section-form{
+	position:relative;
+	width:100%;
+	height:672px;
+	background-color:#fff;
+	padding:45px 0;
+}
+.section-form p{
+	line-height:1.7;
+}
+.section-form__title{
+	font-size:30px;
+	line-height:1.2;
+	font-weight:700;
+	margin-bottom:23px;
+}
+.index-form{
+	position:absolute;
+	width:570px;
+	height:480px;
+	left:50%;
+	top:205px;
+	margin-left:-285px;
+	background-color:#fff;
+	z-index:2;
+	box-shadow:0 10px 15px 0 #ccc;
+}
+.index-form__title{
+	padding:30px; /* Убрать высоту, поставить line-height */
+	font-size:21px;
+	font-weight:700;
+	line-height:1.238;
+	letter-spacing:.05em;
+	background-color:#766357;
+	color:#fff;
+}
+.index-form__main{
+	padding:55px;
+}
+.index-form label{
+	display:inline-block;
+	text-align:left;
+	font:700 14px/1.5 'PT Sans', sans-serif;
+	margin-bottom:30px;
+	margin-right:15px;
+}
+.index-form input[type="text"],
+.index-form input[type="date"]{
+	display:inline-block;
+	font:700 14px/1.5 'PT Sans', sans-serif;
+	text-transform:uppercase;
+	border:2px solid #f2f2f2;
+	background-color:#f2f2f2;
+	padding:7px 13px;
+}
+.index-form input[type="date"]{
+	width:292px;
+	padding-right:40px;
+}
+.index-form input[type="date"]:hover{
+	background-color:#ebebeb;
+	border:2px solid #ebebeb;
+}
+.index-form input[type="date"]:active{
+	background-color:#fff;
+	border:2px solid #e5e5e5;
+}
+.index-form input[type="text"]{
+	width:52px;
+	padding:7px 30px;
+	text-align:center;
+}
+.half-width label{
+	margin-right:19px;
+}
+.half-width{
+	display: inline-block;
+	margin-right:41px;
+	margin-bottom:30px;
+}
+.half-width:last-of-type{
+	margin-right:0;
+}
+.index-form input[type="submit"]{
+	width:100%;
+	font:700 21px/1.3 'PT Sans', sans-serif;
+	color:#fff;
+	background-color:#81b3d2;
+	text-transform:uppercase;
+	border:none;
+	cursor:pointer;
+	padding:13px;
+}
+.index-form input[type="submit"]:hover{ background-color:#669ec0; }
+.index-form input[type="submit"]:active{
+	background-color:#5496bd;
+	color:#88b6d1;
+}
+
+.map{
+	position:absolute;
+	left:0;
+	bottom:-120px;
+	width:100%;
+	height:592px;
+	background:url(../images/map.jpg) 0 100% no-repeat;
+	z-index:1;
+}
+
+/* Footer */
+
+.page-footer{
+	position:relative;
+	background-color:rgba(255,255,255,.9);
+	z-index:10;
+	padding:36px;
+}
+.page-footer__block--hash{
+	font-size:21px;
+	line-height:26px;
+	font-weight:700;
+	padding-top:10px;
+}
+.btn-social{
+	display:inline-block;
+    text-shadow:none;
+    color:transparent;
+    background:#81b3d2 url(../images/sedona-sprite.png) no-repeat -381px -86px;
+	width:46px;
+	height:48px;
+	margin-right:5px;
+}
+.btn-social--fb{ background-position:-414px -85px; }
+.btn-social--youtube{ background-position:-451px -86px; }
+.btn-social:hover{ background-color:#669ec0; }
+.btn-social:active{ background-color:rgba(84,150,189,1); }
+.btn-social--tw:active{ background-position:-451px 15px; }
+.btn-social--fb:active{ background-position:-453px -18px; }
+.btn-social--youtube:active{ background-position:-451px -51px; }
+.page-footer__block--copyright{
+	line-height:1.857; /* 26px / 14px */
+	padding-top:10px;
+}
+.page-footer__block--copyright a{
+	position: relative;
+	font:0/0 a;
+    text-shadow:none;
+    color:transparent;
+}
+.page-footer__block--copyright span{
+	margin-left:48px;
+}
+.block--copyright:after{
+	content:'';
+	display:table;
+	position:absolute;
+	left:10px;
+	top:-20px;
+	width:27px;
+	height:33px;
+	background:url(../images/sedona-sprite.png) no-repeat -303px 0px;
+}
+.copyright-academy:after{ background-position:-341px 0px; }
+.copyright-glukhanko:hover:after{ background-position:-303px -41px; }
+.copyright-academy:hover:after{ background-position:-341px -41px; }
+.copyright-glukhanko:active:after{ background-position:-303px -84px; }
+.copyright-academy:active:after{ background-position:-341px -84px; }
+
+/* Hotels page */
+
+.top-filter{
+	background:url(../images/hotel-header-image.jpg) no-repeat 0 35%;
+	background-size:100% auto;
+	padding:30px 0;
+	padding-bottom:20px;
+}
+.top-filter__left{
+	width:20%;
+	float:left;
+	margin:0 4%;
+}
+.top-filter__range{
+	min-width:220px;
+	width:26.5%;
+	float:right;
+	margin-right:5%;
+}
+.top-filter__left--title{
+	text-align:left;
+	font:700 16px/1.31 'PT Sans', sans-serif;
+	color:#fff;
+	margin-bottom:15px;
+}
+input[type="checkbox"]{
+	display: none;
+}
+input[type="checkbox"]+label{
+    position:relative;
+    display:block;
+    padding:12px;
+	padding-left:40px;
+    text-align:left;
+    line-height:1.5;
+    color:#fff;
+}
+input[type="checkbox"]+label:before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:12px;
+    width:20px;
+    height:20px;
+    background:url(../images/sedona-sprite.png) no-repeat -406px -1px;
+}
+input[type="checkbox"]:hover+label:before{
+	background-position: -406px -32px;
+}
+input[type="checkbox"]:active+label:before{
+	background-position:-406px -62px;
+}
+input[type="checkbox"]:checked+label:before{
+	background-position:-380px -2px;
+}
+input[type="checkbox"]:checked:hover+label:before{
+	background-position:-380px -33px;
+}
+input[type="checkbox"]:checked:active+label:before{
+	background-position:-380px -63px;
+}
+[class^="top-filter__range--controls"]{
+	width:99%;
+	padding:13px 0;
+	border:2px solid #fff;
+} /* Стили для двух блоков фильтра по стоимости */
+.top-filter__range--controls-2{
+	border:none;
+	position:relative;
+    height:80px;
+    margin-bottom:15px;
+    padding:0;
+    overflow:hidden;
+}
+
+input[class$="-price"]{
+	border:none;
+	background:none;
+	width:20%;
+	text-align:center;
+	color:#fff;
+}
+.top-filter__range--controls label{
+	color:#fff;
+}
+.top-filter__range--controls label:first-child{
+	border-right:2px solid #fff;
+	margin-right:10%;
+	padding-right:10%;
+}
+.scale{
+    margin-top:45px;
+    height:2px;
+    background:rgba(255, 255, 255, .3);
+}
+.bar{
+    width:65%; /* При изменении % двигается ползунок */
+    height:2px;
+    background-color:#fff;
+}
+.toggle{
+    position:absolute;
+    top:35px;
+    left:0;
+    width:4px;
+    height:4px;
+    border:8px solid white;
+    background:#ababab;
+    cursor:pointer;
+    border-radius:50%;
+}
+.toggle:hover{
+	background:#1c4f80;
+}
+.top-filter__range--controls-2 .max-toggle{
+    left:65%;
+}
+.middle-filter{
+	padding:27px 5% 27px 4%;
+}
+.middle-filter--found{
+	width:165px;
+	float:left;
+}
+.middle-filter--found div{
+	text-align:left;
+	font:700 21px/1.3 'PT Sans', sans-serif;
+}
+.middle-filter--sort{
+	width:60%;
+	float:left;
+}
+.middle-filter--triangl{
+	width:100px;
+	float:right;
+	text-align:right;
+}
+.sort-filter{
+	text-align:left;
+}
+.sort-filter li{
+	display:inline-block;
+    font-size:12px;
+    line-height:1.5;
+    margin-right:32px;
+}
+.sort-filter a{
+    display:block;
+    padding:0;
+    text-decoration:none;
+    color:#b2b2b2;
+}
+.sort-filter span{ border-bottom:1px dotted #81b3d2; }
+.sort-filter span:hover{
+    border-bottom:1px solid #81b3d2;
+    color:#81b3d2;
+}
+.sort-filter span:active{
+    border-bottom:none;
+    color:#000;
+}
+.sort-filter-active span,
+.sort-filter-active:hover span{
+	border-bottom:none;
+	color:#81b3d2;
+	cursor:default;
+}
+.sort-up,
+.sort-down{
+    position:relative;
+    font:0/0 a;
+    text-shadow:none;
+    color:transparent;
+    background:green;
+    margin-right:5px;
+}
+.sort-down:before{
+    content:"";
+    position:absolute;
+    right:-80px;
+    top:-10px;
+    width:0;
+    height:0;
+    border-left:5px solid transparent;
+    border-right:5px solid transparent;
+    border-top:10px solid #ccc;
+}
+.sort-down:hover:before{
+    border-top:10px solid #000;
+}
+.sort-down:active:before{
+    border-top:10px solid #81b3d2;
+}
+.sort-down-active:before{
+    border-top:10px solid #81b3d2;
+	cursor:default;
+} /* нажатое состояние */
+.sort-up:before{
+    content:"";
+    position:absolute;
+    top:-10px;
+    right:-60px;
+    width:0;
+    height:0;
+    border-left:5px solid transparent;
+    border-right:5px solid transparent;
+    border-bottom:10px solid #ccc;
+}
+.sort-up:hover:before{
+    border-bottom:10px solid #000;
+}
+.sort-up:active:before{
+    border-bottom:10px solid #81b3d2;
+}
+.sort-up-active:before{
+    border-bottom:10px solid #81b3d2;
+	cursor:default;
+}
+.sort-down-active:hover:before{ border-top:10px solid #81b3d2; }
+.sort-up-active:hover:before{ border-bottom:10px solid #81b3d2; }
+
+
+.hotel{
+	border-bottom:1px solid #e5e5e5;
+	padding:30px 5% 30px 4%;
+}
+.hotel:first-child{
+	border-top:1px solid #e5e5e5;
+}
+.hotel__image{
+	width:135px;
+	float:left;
+	margin-right:30px;
+}
+.hotel__description{
+	width:265px;
+	float:left;
+}
+.hotel__description--title a{
+	display:block;
+	color:#000;
+	font:700 21px/.7 'PT Sans', sans-serif;
+	text-align:left;
+	margin-bottom:12px;
+	text-decoration:none;
+}
+.hotel__description--title a:hover{ color:#81b3d2; }
+.hotel__description--title a:active{ color:#b2b2b2; }
+.hotel__description--block{
+	display:inline-block;
+	text-align:left;
+}
+.hotel__description--block span{
+	display:block;
+	margin-bottom:15px;
+	color:#333;
+}
+.btn{
+	display:block;
+	text-decoration:none;
+	font-weight:700;
+	color:#fff;
+	padding:3px 17px;
+	margin-right:2px;
+}
+.btn--blue{ background-color:#81b3d2; }
+.btn--blue:hover{ background-color:#669ec0; }
+.btn--blue:active{ background-color:#5496bd; color:#88b6d1; }
+.btn--brown{ background-color:#766357; }
+.btn--brown:hover{ background-color:#604e43; }
+.btn--brown:active{ background-color:#503e33; color:#857871 }
+.rating{
+	width:110px;
+	float:right;
+}
+.rating__stars{
+	margin-bottom:40px;
+}
+.rating__mark{
+	background-color:#f2f2f2;
+	color:#666;
+	padding:3px;
+}
